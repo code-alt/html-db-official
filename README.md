@@ -12,5 +12,10 @@ here is our little friend known as the url to the web version! [https://raw.gith
 
 ---
 
+- 3.4.1-bugfix-1
+    - Fixed Load method not actually properly coded ( debug set up, not load)
+
+
 - 3.4.0-dev
     - Added Load + Save methods to db class
+   
