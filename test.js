@@ -12,3 +12,7 @@ console.log(c)
 let d = new htmlDB.db(c);
 console.log(d.all());
 console.log(d.hasTable("abx"))
+
+axe.save();
+
+axe.load();
