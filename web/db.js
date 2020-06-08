@@ -1,5 +1,6 @@
-/*nodejs version of HTML-DB*/
-exports.db = class {
+/*Web Version of HTML-DB*/
+const htmlDB = {};
+htmlDB.db = class {
   constructor(sudo_struct = []) {
     Object.defineProperty(this, "db", {
       value: new Map(sudo_struct),
