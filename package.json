@@ -1,16 +1,10 @@
 {
   "name": "html-db",
-  "version": "3.4.0-dev",
+  "version": "3.4.1-bugfix-1",
   "description": "Your neighborhood god mode machine of databases",
   "main": "index.js",
   "scripts": {},
   "dependencies": {
-    "@discordjs/collection": "^0.1.5",
-    "lodash": "*",
-    "uglifyjs": "^2.4.11",
-    "express": "^4.17.1",
-    "ejs": "^3.1.3",
-    "save-file-atomic": "^1.0.0"
   },
   "engines": {
     "node": "12.x"

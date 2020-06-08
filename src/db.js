@@ -1,5 +1,4 @@
 /*nodejs version of HTML-DB*/
-const savefile = require("save-file-atomic");
 exports.db = class {
   constructor(sudo_struct = []) {
     Object.defineProperty(this, "db", {
@@ -55,7 +54,7 @@ exports.db = class {
   async load() {
     let fs = require("fs");
     let data = await fs.readFileSync("h.db.json", { encoding:"utf8", flag:"r+"});
-    console.log(data);
+    this.db = new Map(JSON.parse(data))
   }
   clear(){
     this.db.clear();
