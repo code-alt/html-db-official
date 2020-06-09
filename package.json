@@ -3,7 +3,9 @@
   "version": "3.4.2",
   "description": "Your neighborhood god mode machine of databases",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test":"node test.js"
+  },
   "dependencies": {
   },
   "engines": {
