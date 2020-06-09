@@ -1,21 +1,28 @@
 /*nodejs version of HTML-DB*/
-exports.db = class {
+class db {
   constructor(sudo_struct = []) {
     Object.defineProperty(this, "db", {
       value: new Map(sudo_struct),
       writable: true,
       configurable: true
     });
+    try {
+      this.load();
+    } catch (e) {
+      0;
+    }
   }
   all() {
     return Array.from(this.db);
   }
-  createTable(name) {
+  async createTable(name) {
     this.db.set(name, new Map());
+    await this.save();
     return true;
   }
-  deleteTable(name) {
+  async deleteTable(name) {
     this.db.delete(name);
+    await this.save();
     return true;
   }
   getTable(name) {
@@ -39,7 +46,7 @@ exports.db = class {
   /*SAVE TO FILE*/
   async save() {
     let d = this.toJSON();
-    d = JSON.stringify(d)
+    d = JSON.stringify(d);
     let fs = require("fs");
     await fs.writeFileSync(
       "h.db.json",
@@ -51,12 +58,18 @@ exports.db = class {
     );
     return true;
   }
+  /*LOAD FROM FILE*/
   async load() {
     let fs = require("fs");
-    let data = await fs.readFileSync("h.db.json", { encoding:"utf8", flag:"r+"});
-    this.db = new Map(JSON.parse(data))
+    let data = await fs.readFileSync("h.db.json", {
+      encoding: "utf8",
+      flag: "r+"
+    });
+    this.db = new Map(JSON.parse(data));
   }
-  clear(){
+  clear() {
     this.db.clear();
   }
-};
+}
+
+module.exports.db = db;
