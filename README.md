@@ -14,6 +14,10 @@ here is our little friend known as the url to the web version! [https://raw.gith
 
 ---
 
+- 3.4.3
+  - Added clear method
+  - asynced createTable/deleteTable/load/save/clear
+
 - 3.4.1-bugfix-1
   - Fixed Load method not actually properly coded ( debug set up, not load)
 

@@ -67,8 +67,9 @@ class db {
     });
     this.db = new Map(JSON.parse(data));
   }
-  clear() {
+  async clear() {
     this.db.clear();
+    await this.save();
   }
 }
 
