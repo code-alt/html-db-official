@@ -1,3 +1,4 @@
+
 let htmlDB = require("./index.js");
 let axe = new htmlDB.db();
 axe.createTable("abx");
