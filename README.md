@@ -4,7 +4,7 @@
 
 <a href="https://nodei.co/npm/html-db"><img src="https://nodei.co/npm/html-db.png"></a>
 
-No Need for Any docs, but, feel free to add them!
+The docs will be available soon!
 
 here is our little friend known as the url to the web version! [https://raw.githubusercontent.com/Jonyk56/html-db-official/master/web/db.js](https://raw.githubusercontent.com/Jonyk56/html-db-official/master/web/db.js)
 
@@ -13,6 +13,10 @@ here is our little friend known as the url to the web version! [https://raw.gith
 # ChangeLog
 
 ---
+
+- 3.5.0
+  - Finishing touches
+  - PARTIAL web template
 
 - 3.4.3
   - Added clear method
