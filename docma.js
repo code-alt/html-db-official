@@ -7,7 +7,10 @@ const config = {
   ],
   dest: './docs',
   clean:true,
-  recurse:true
+  recurse:true,
+  app:{
+    base:"/html-db-official"
+  }
 };
 const Docma = require("docma")
 Docma.create()
