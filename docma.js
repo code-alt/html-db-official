@@ -9,7 +9,7 @@ const config = {
   clean:true,
   recurse:true,
   app:{
-    base:"/html-db-official"
+    title:"html-db"
   }
 };
 const Docma = require("docma")
