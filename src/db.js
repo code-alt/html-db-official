@@ -22,9 +22,9 @@ class db {
     try {
       this.load();
     } catch (e) {
-      0;
+    } finally {
+      return true;
     }
-    return true;
   }
 
   /**
@@ -131,6 +131,6 @@ class db {
   }
 }
 /**
-*@property {class} db the database
-*/
+ *@property {class} db the database
+ */
 module.exports.db = db;

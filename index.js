@@ -2,6 +2,6 @@
 *@file index.js
 */
 module.exports = {
-  ...require("./src/db"),
+  db:require("./src/db").db,
   ...require("./src/web")
 };
