@@ -1,5 +1,8 @@
 /*nodejs version of HTML-DB*/
 /**
+*@file src/db.js
+*/
+/**
 *@example
 * let database = new HtmlDB.db();
 * ...

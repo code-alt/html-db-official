@@ -2,11 +2,26 @@
 
 ![npm (tag)](https://img.shields.io/npm/v/html-db/latest)
 
-<a href="https://nodei.co/npm/html-db"><img src="https://nodei.co/npm/html-db.png"></a>
+[![CodeFactor](https://www.codefactor.io/repository/github/jonyk56/html-db-official/badge)](https://www.codefactor.io/repository/github/jonyk56/html-db-official)
 
-The docs will be available soon!
+[![DeepScan grade](https://deepscan.io/api/teams/9716/projects/12298/branches/188473/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=9716&pid=12298&bid=188473)
+
+![Code Inspector m8](https://www.code-inspector.com/project/9355/score/svg)
+
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/9005089267824740b7f69b7f3c72dcd5)](https://www.codacy.com/manual/Jonyk56/html-db-official?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Jonyk56/html-db-official&amp;utm_campaign=Badge_Grade)
 
 here is our little friend known as the url to the web version! [https://raw.githubusercontent.com/Jonyk56/html-db-official/master/web/db.js](https://raw.githubusercontent.com/Jonyk56/html-db-official/master/web/db.js)
+
+---
+
+# resources
+
+---
+
+[Code Inspector Dashboard](https://frontend.code-inspector.com/public/project/9355/html-db-official/dashboard)
+
+
+
 
 ---
 
