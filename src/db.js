@@ -22,9 +22,9 @@ class db {
     try {
       this.load();
     } catch (e) {
-      0;
+    } finally {
+      return true;
     }
-    return true;
   }
 
   /**
@@ -130,5 +130,7 @@ class db {
     await this.save();
   }
 }
-
+/**
+ *@property {class} db the database
+ */
 module.exports.db = db;
