@@ -130,5 +130,7 @@ class db {
     await this.save();
   }
 }
-
+/**
+*@property {class} db the database
+*/
 module.exports.db = db;
