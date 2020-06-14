@@ -1,7 +1,7 @@
 /**
-*@file index.js
-*/
+ *@file index.js
+ */
 module.exports = {
-  db:require("./src/db").db,
-  ...require("./src/web")
+  db: require("./src/db"),
+  WebManager: require("./src/web")
 };
