@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Home - Documentation</title>
+    <title>src/web.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -29,25 +29,38 @@
 
 <div id="main">
     
+    <h1 class="page-title">src/web.js</h1>
+    
 
     
 
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>
 
 
 
+const express = require("express");
+const loginMgr = express();
+const fetcher = express();
+const DBMGR = express.Router();
+DBMGR.use("/auth", loginMgr);
+fetcher.all(function(req,res,next) {
+  
+})
 
 
-
-
-
-
-    
-
-
-
+/**
+ *@name db web manager
+ *@exports htmldb.WebManager
+ */
+module.exports = DBMGR;
+</code></pre>
+        </article>
+    </section>
 
 
 

@@ -1,14 +1,19 @@
-/*expect this in 4.0*/
+
+
+
+
 const express = require("express");
 const loginMgr = express();
-const DBMGR = express();
+const fetcher = express();
+const DBMGR = express.Router();
 DBMGR.use("/auth", loginMgr);
-
-
-
+fetcher.all(function(req,res,next) {
+  
+})
 
 
 /**
- *@exports htmldb/WebManager
+ *@name db web manager
+ *@exports htmldb.WebManager
  */
-module.exports = DBMGR
+module.exports = DBMGR;

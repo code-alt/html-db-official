@@ -1,0 +1,23 @@
+{
+  "plugins": [],
+  "recurseDepth": 10,
+  "source": {
+    "includePattern": ".js$",
+    "excludePattern": "(^|\\/|\\\\)_",
+    "include":["index.js", "src"],
+    "exclude":[]
+  },
+  "sourceType": "module",
+  "tags": {
+    "allowUnknownTags": true,
+    "dictionaries": ["jsdoc","closure"]
+  },
+  "templates": {
+    "cleverLinks": false,
+    "monospaceLinks": false
+  },
+  "opts": {
+    "template": "./node_modules/minami",
+    "destination":"./docs/"
+  }
+}

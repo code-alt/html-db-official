@@ -1,14 +1,15 @@
 /*nodejs version of HTML-DB*/
+
+
+
 /**
- *@file src/db.js
- */
-/**
+ *@file db
+ *@description database class
+ *@exports htmldb.db
  *@example
  * let database = new HtmlDB.db();
  * ...
  */
-
-// @example sdfdsfdsfsds
 class db {
   /**
    *@returns {(boolean|Error)}
@@ -133,7 +134,4 @@ class db {
     await this.save();
   }
 }
-/**
- *@exports htmldb/db
- */
 module.exports= db;
