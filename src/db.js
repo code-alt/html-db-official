@@ -5,6 +5,7 @@
 /**
  *@file db
  *@description database class
+ *@exports htmldb.db
  *@example
  * let database = new HtmlDB.db();
  * ...
