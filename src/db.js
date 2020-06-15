@@ -1,7 +1,5 @@
 /*nodejs version of HTML-DB*/
 
-
-
 /**
  *@file db
  *@description database class
@@ -26,9 +24,8 @@ class db {
       throw new Error(
         "File h.db.json is not accessable, does not exist, or is being written to by another program at this very moment. please fix permissions/ add the file with the contents of '{}' in it"
       );
-    } finally {
-      return true;
     }
+    return true;
   }
 
   /**
@@ -134,4 +131,4 @@ class db {
     await this.save();
   }
 }
-module.exports= db;
+module.exports = db;
