@@ -38,6 +38,11 @@ github: ``npm i Jony56/html-db-official#glitch``
 
 ---
 
+- 3.6.0
+  - Plugin Class ( Yep, PLUGINSSS!!!!)
+  - little bit more to the web template
+  - More done to the db ( loadPlugins )
+
 - 3.5.0
   - Finishing touches
   - PARTIAL web template

@@ -1,6 +1,6 @@
 {
   "name": "html-db",
-  "version": "3.5.1",
+  "version": "3.6",
   "description": "Your neighborhood god mode machine of databases",
   "main": "index.js",
   "scripts": {
