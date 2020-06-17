@@ -24,7 +24,7 @@
 <label for="nav-trigger" class="overlay"></label>
 
 <nav>
-    <li class="nav-link nav-home-link"><a href="index.html">Home</a></li><li class="nav-heading">Classes</li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="src_db.module_js-db.html">db</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="src_db.module_js-db.html#all">all</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="src_db.module_js-db.html#clear">clear</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="src_db.module_js-db.html#createTable">createTable</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="src_db.module_js-db.html#deleteTable">deleteTable</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="src_db.module_js-db.html#getTable">getTable</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="src_db.module_js-db.html#hasTable">hasTable</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="src_db.module_js-db.html#load">load</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="src_db.module_js-db.html#save">save</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="src_db.module_js-db.html#toJSON">toJSON</a></span></li><li class="nav-heading">Modules</li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-db%2520web%2520manager.html">db web manager</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-htmldb.html">htmldb</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="src_db.module_js.html">src/db.js</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="src_plugin.module_js.html">src/plugin.js</a></span></li>
+    <li class="nav-link nav-home-link"><a href="index.html">Home</a></li><li class="nav-heading">Classes</li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="src_db.module_js-db.html">db</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="src_db.module_js-db.html#all">all</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="src_db.module_js-db.html#clear">clear</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="src_db.module_js-db.html#createTable">createTable</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="src_db.module_js-db.html#deleteTable">deleteTable</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="src_db.module_js-db.html#getTable">getTable</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="src_db.module_js-db.html#hasTable">hasTable</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="src_db.module_js-db.html#load">load</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="src_db.module_js-db.html#loadPlugins">loadPlugins</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="src_db.module_js-db.html#save">save</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="src_db.module_js-db.html#toJSON">toJSON</a></span></li><li class="nav-heading">Modules</li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-db%2520web%2520manager.html">db web manager</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-htmldb.html">htmldb</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="src_db.module_js.html">src/db.js</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="src_plugin.module_js.html">src/plugin.js</a></span></li>
 </nav>
 
 <div id="main">
@@ -58,7 +58,7 @@
 
     
 
-    <h4 class="name" id="db"><span class="type-signature"></span>new db<span class="signature">(plugins)</span><span class="type-signature"> &rarr; {boolean|Error}</span></h4>
+    <h4 class="name" id="db"><span class="type-signature"></span>new db<span class="signature">(data)</span><span class="type-signature"> &rarr; {boolean|Error}</span></h4>
 
     
 
@@ -141,7 +141,7 @@
 
         <tr>
             
-                <td class="name"><code>plugins</code></td>
+                <td class="name"><code>data</code></td>
             
 
             <td class="type">
@@ -158,7 +158,7 @@
             
 
             <td class="description last">
-                a list of plugins
+                the database ( if not provided,it will grab from file, if it can)
                 
             </td>
         </tr>
@@ -274,7 +274,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="src_db.js.html">src/db.js</a>, <a href="src_db.js.html#line40">line 40</a>
+        <a href="src_db.js.html">src/db.js</a>, <a href="src_db.js.html#line39">line 39</a>
     </li></ul></dd>
     
 
@@ -430,7 +430,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="src_db.js.html">src/db.js</a>, <a href="src_db.js.html#line133">line 133</a>
+        <a href="src_db.js.html">src/db.js</a>, <a href="src_db.js.html#line132">line 132</a>
     </li></ul></dd>
     
 
@@ -513,7 +513,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="src_db.js.html">src/db.js</a>, <a href="src_db.js.html#line52">line 52</a>
+        <a href="src_db.js.html">src/db.js</a>, <a href="src_db.js.html#line51">line 51</a>
     </li></ul></dd>
     
 
@@ -680,7 +680,7 @@ db.getTable("Hellow World!").set("a", "b"); // true</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="src_db.js.html">src/db.js</a>, <a href="src_db.js.html#line63">line 63</a>
+        <a href="src_db.js.html">src/db.js</a>, <a href="src_db.js.html#line62">line 62</a>
     </li></ul></dd>
     
 
@@ -839,7 +839,7 @@ db.getTable("Hellow World!").set("a", "b"); // true</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="src_db.js.html">src/db.js</a>, <a href="src_db.js.html#line73">line 73</a>
+        <a href="src_db.js.html">src/db.js</a>, <a href="src_db.js.html#line72">line 72</a>
     </li></ul></dd>
     
 
@@ -998,7 +998,7 @@ db.getTable("Hellow World!").set("a", "b"); // true</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="src_db.js.html">src/db.js</a>, <a href="src_db.js.html#line81">line 81</a>
+        <a href="src_db.js.html">src/db.js</a>, <a href="src_db.js.html#line80">line 80</a>
     </li></ul></dd>
     
 
@@ -1154,7 +1154,7 @@ db.getTable("Hellow World!").set("a", "b"); // true</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="src_db.js.html">src/db.js</a>, <a href="src_db.js.html#line122">line 122</a>
+        <a href="src_db.js.html">src/db.js</a>, <a href="src_db.js.html#line121">line 121</a>
     </li></ul></dd>
     
 
@@ -1171,6 +1171,141 @@ db.getTable("Hellow World!").set("a", "b"); // true</code></pre>
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+        
+            
+<div class="section-method">
+
+    
+
+    <h4 class="name" id="loadPlugins"><span class="type-signature"></span>loadPlugins<span class="signature">(pluginList)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    load plugins
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="src_db.js.html">src/db.js</a>, <a href="src_db.js.html#line141">line 141</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>pluginList</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><code>Array</code></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">
+                Array of plugins
+                
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
 
 
 
@@ -1237,7 +1372,7 @@ db.getTable("Hellow World!").set("a", "b"); // true</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="src_db.js.html">src/db.js</a>, <a href="src_db.js.html#line105">line 105</a>
+        <a href="src_db.js.html">src/db.js</a>, <a href="src_db.js.html#line104">line 104</a>
     </li></ul></dd>
     
 
@@ -1320,7 +1455,7 @@ db.getTable("Hellow World!").set("a", "b"); // true</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="src_db.js.html">src/db.js</a>, <a href="src_db.js.html#line93">line 93</a>
+        <a href="src_db.js.html">src/db.js</a>, <a href="src_db.js.html#line92">line 92</a>
     </li></ul></dd>
     
 
@@ -1448,7 +1583,7 @@ db.getTable("Hellow World!").set("a", "b"); // true</code></pre>
 <br class="clear">
 
 <footer>
-    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.4</a> on Wed Jun 17 2020 17:34:17 GMT+0000 (Coordinated Universal Time) using the Minami theme.
+    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.4</a> on Wed Jun 17 2020 18:16:04 GMT+0000 (Coordinated Universal Time) using the Minami theme.
 </footer>
 
 <script>prettyPrint();</script>

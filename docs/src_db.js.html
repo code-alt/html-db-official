@@ -24,7 +24,7 @@
 <label for="nav-trigger" class="overlay"></label>
 
 <nav>
-    <li class="nav-link nav-home-link"><a href="index.html">Home</a></li><li class="nav-heading">Classes</li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="src_db.module_js-db.html">db</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="src_db.module_js-db.html#all">all</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="src_db.module_js-db.html#clear">clear</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="src_db.module_js-db.html#createTable">createTable</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="src_db.module_js-db.html#deleteTable">deleteTable</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="src_db.module_js-db.html#getTable">getTable</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="src_db.module_js-db.html#hasTable">hasTable</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="src_db.module_js-db.html#load">load</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="src_db.module_js-db.html#save">save</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="src_db.module_js-db.html#toJSON">toJSON</a></span></li><li class="nav-heading">Modules</li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-db%2520web%2520manager.html">db web manager</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-htmldb.html">htmldb</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="src_db.module_js.html">src/db.js</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="src_plugin.module_js.html">src/plugin.js</a></span></li>
+    <li class="nav-link nav-home-link"><a href="index.html">Home</a></li><li class="nav-heading">Classes</li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="src_db.module_js-db.html">db</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="src_db.module_js-db.html#all">all</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="src_db.module_js-db.html#clear">clear</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="src_db.module_js-db.html#createTable">createTable</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="src_db.module_js-db.html#deleteTable">deleteTable</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="src_db.module_js-db.html#getTable">getTable</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="src_db.module_js-db.html#hasTable">hasTable</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="src_db.module_js-db.html#load">load</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="src_db.module_js-db.html#loadPlugins">loadPlugins</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="src_db.module_js-db.html#save">save</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="src_db.module_js-db.html#toJSON">toJSON</a></span></li><li class="nav-heading">Modules</li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-db%2520web%2520manager.html">db web manager</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-htmldb.html">htmldb</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="src_db.module_js.html">src/db.js</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="src_plugin.module_js.html">src/plugin.js</a></span></li>
 </nav>
 
 <div id="main">
@@ -51,25 +51,24 @@
  */
 class db {
     /**
-     * @param {Array} plugins a list of plugins
-     *@returns {(boolean|Error)}
+     * @param {Array} data the database ( if not provided,it will grab from file, if it can)
+     * @returns {(boolean|Error)}
      */
-    constructor(plugins = []) {
+    constructor(data = []) {
         Object.defineProperty(this, "db", {
-            value: new Map(),
+            value: new Map(data),
             writable: true,
             configurable: true
         });
         try {
             this.load();
         } catch (e) {
-            throw new Error(
-                "File h.db.json is not accessable, does not exist, or is being written to by another program at this very moment. please fix permissions/ add the file with the contents of '{}' in it"
-            );
+            Object.defineProperty(this, "_conf_load_at_boot", {
+                value: e,
+                writable: true,
+                configurable: true
+            });
         }
-        plugins.forEach(pl => {
-            pl.run(this);
-        });
         return true;
     }
 
@@ -175,6 +174,17 @@ class db {
         this.db.clear();
         await this.save();
     }
+
+    /**
+     * @description load plugins
+     * @param {Array} pluginList Array of plugins
+     */
+    loadPlugins(pluginList) {
+        let self = this;
+        pluginList.forEach(pl => {
+            pl.run(self);
+        });
+    }
 }
 module.exports = db;
 </code></pre>
@@ -189,7 +199,7 @@ module.exports = db;
 <br class="clear">
 
 <footer>
-    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.4</a> on Wed Jun 17 2020 17:34:17 GMT+0000 (Coordinated Universal Time) using the Minami theme.
+    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.4</a> on Wed Jun 17 2020 18:16:04 GMT+0000 (Coordinated Universal Time) using the Minami theme.
 </footer>
 
 <script>prettyPrint();</script>
