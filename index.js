@@ -5,5 +5,6 @@
 */
 module.exports = {
   db: require("./src/db"),
-  WebManager: require("./src/web")
+  WebManager: require("./src/web"),
+  ...require("./src/plugin")
 };
