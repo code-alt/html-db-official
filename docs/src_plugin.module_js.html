@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>src/web.js - Documentation</title>
+    <title>src/plugin.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -29,39 +29,106 @@
 
 <div id="main">
     
-    <h1 class="page-title">src/web.js</h1>
+    <h1 class="page-title">src/plugin.js</h1>
     
 
     
 
 
 
+
+<section>
+
+<header>
     
-    <section>
-        <article>
-            <pre class="prettyprint source linenums"><code>
+</header>
 
-
-
-const express = require("express");
-const loginMgr = express();
-const fetcher = express();
-const DBMGR = express.Router();
-DBMGR.use("/auth", loginMgr);
-
-loginMgr.post("in", (req,res) => {
+<article>
+    <div class="container-overview">
     
-});
+        
+            <div class="description">Plugin Class</div>
+        
+
+        
 
 
-/**
- *@name db web manager
- *@exports htmldb.WebManager
- */
-module.exports = DBMGR;
-</code></pre>
-        </article>
-    </section>
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="src_plugin.js.html">src/plugin.js</a>, <a href="src_plugin.js.html#line1">line 1</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+            <h3>Example</h3>
+            
+    <pre class="prettyprint"><code>class Dx extends HtmlDB.Plugin{
+ run(self){
+     self.node = true;
+     //...
+ }
+}
+//...</code></pre>
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+
+    
+
+    
+
+    
+</article>
+
+</section>
 
 
 
