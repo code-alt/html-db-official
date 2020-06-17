@@ -1,3 +1,4 @@
+
 ![site is down =P](https://david-dm.org/j-tech-foundation/html-db.svg)
 
 ![npm (tag)](https://img.shields.io/npm/v/html-db/latest)
@@ -10,7 +11,15 @@
 
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/9005089267824740b7f69b7f3c72dcd5)](https://www.codacy.com/manual/Jonyk56/html-db-official?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Jonyk56/html-db-official&amp;utm_campaign=Badge_Grade)
 
+[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/Jonyk56/html-db-official)
+
 here is our little friend known as the url to the web version! [https://raw.githubusercontent.com/Jonyk56/html-db-official/master/web/db.js](https://raw.githubusercontent.com/Jonyk56/html-db-official/master/web/db.js)
+
+---
+
+# install 
+
+github: ``npm i Jony56/html-db-official#glitch``
 
 ---
 
