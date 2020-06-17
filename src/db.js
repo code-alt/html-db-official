@@ -5,17 +5,25 @@
  *@description database class
  *@exports htmldb.db
  *@example
- * let database = new HtmlDB.db();
+ * let database = new HtmlDB.db([], []);
  * ...
  */
 class db {
     /**
+     * @param {Object} data the database ( if not provided, will grab from file, if it can)
      * @param {Array} plugins a list of plugins
      *@returns {(boolean|Error)}
      */
-    constructor(plugins = []) {
+    constructor(data = {d:[]}, plugins = []) {
+        if (typeof data != Object) {
+            if (typeof data != Array){
+                throw new Error("unable to read arguments!")
+            }
+            plugins = data;
+            data = {d:[]};
+        }
         Object.defineProperty(this, "db", {
-            value: new Map(),
+            value: new Map(data.d),
             writable: true,
             configurable: true
         });
@@ -97,7 +105,7 @@ class db {
             let ite = Object.fromEntries(this.db.get(item));
             ar[item] = ite;
         }
-        return Array.from(Object.entries(ar));
+        return { d:Array.from(Object.entries(ar))}
     }
     /**
      *@description saves the table to file ( note - not working as expected, figuring out the issue)
@@ -125,7 +133,7 @@ class db {
             encoding: "utf8",
             flag: "r+"
         });
-        this.db = new Map(JSON.parse(data));
+        this.db = new Map(JSON.parse(data).d);
     }
     /**
      *@description clear the database
