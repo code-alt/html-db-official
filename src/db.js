@@ -5,38 +5,29 @@
  *@description database class
  *@exports htmldb.db
  *@example
- * let database = new HtmlDB.db([], []);
+ * let database = new HtmlDB.db([]);
  * ...
  */
 class db {
     /**
-     * @param {Object} data the database ( if not provided, will grab from file, if it can)
-     * @param {Array} plugins a list of plugins
-     *@returns {(boolean|Error)}
+     * @param {Array} data the database ( if not provided, will grab from file)
+     * @returns {(boolean|Error)}
      */
-    constructor(data = {d:[]}, plugins = []) {
-        if (typeof data != Object) {
-            if (typeof data != Array){
-                throw new Error("unable to read arguments!")
-            }
-            plugins = data;
-            data = {d:[]};
-        }
+    constructor(data = []) {
         Object.defineProperty(this, "db", {
-            value: new Map(data.d),
+            value: new Map(data),
             writable: true,
             configurable: true
         });
         try {
             this.load();
         } catch (e) {
-            throw new Error(
-                "File h.db.json is not accessable, does not exist, or is being written to by another program at this very moment. please fix permissions/ add the file with the contents of '{}' in it"
-            );
+            Object.defineProperty(this, "_conf_load_at_boot", {
+                value: e,
+                writable: true,
+                configurable: true
+            });
         }
-        plugins.forEach(pl => {
-            pl.run(this);
-        });
         return true;
     }
 
@@ -105,7 +96,7 @@ class db {
             let ite = Object.fromEntries(this.db.get(item));
             ar[item] = ite;
         }
-        return { d:Array.from(Object.entries(ar))}
+        return Array.from(Object.entries(ar));
     }
     /**
      *@description saves the table to file ( note - not working as expected, figuring out the issue)
@@ -133,7 +124,7 @@ class db {
             encoding: "utf8",
             flag: "r+"
         });
-        this.db = new Map(JSON.parse(data).d);
+        this.db = new Map(JSON.parse(data));
     }
     /**
      *@description clear the database
@@ -141,6 +132,17 @@ class db {
     async clear() {
         this.db.clear();
         await this.save();
+    }
+
+    /**
+     * @description load plugins
+     * @param {Array} pluginList Array of plugins
+     */
+    loadPlugins(pluginList) {
+        let self = this;
+        pluginList.forEach(pl => {
+            pl.run(self);
+        });
     }
 }
 module.exports = db;

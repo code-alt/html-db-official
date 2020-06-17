@@ -14,7 +14,15 @@ let c = axe.toJSON();
 console.log(c)
 let d = new htmlDB.db(c);
 console.log(d.all());
-console.log(d.hasTable("abx"))
+console.log(d.hasTable("abx"));
+class tds extends htmlDB.Plugin{
+    run(self){
+        self.findMe = true;
+        return;
+    }
+}
+axe.loadPlugins([new tds()]);
+console.log(axe.findMe)
 axe.save();
 axe.createTable("d1");
 console.log(axe.all())
