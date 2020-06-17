@@ -7,9 +7,10 @@ const loginMgr = express();
 const fetcher = express();
 const DBMGR = express.Router();
 DBMGR.use("/auth", loginMgr);
-fetcher.all(function(req,res,next) {
-  
-})
+
+loginMgr.post("in", (req,res) => {
+    
+});
 
 
 /**

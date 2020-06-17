@@ -1,2 +1,8 @@
 h.db.json
 node_modules/
+.theia/
+views/
+chat.txt
+index.html
+serve.js
+docma.js
