@@ -5,12 +5,12 @@
  *@description database class
  *@exports htmldb.db
  *@example
- * let database = new HtmlDB.db([]);
+ * let database = new HtmlDB.db();
  * ...
  */
 class db {
     /**
-     * @param {Array} data the database ( if not provided, will grab from file)
+     * @param {Array} data the database ( if not provided,it will grab from file, if it can)
      * @returns {(boolean|Error)}
      */
     constructor(data = []) {
