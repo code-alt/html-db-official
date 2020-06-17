@@ -10,25 +10,24 @@
  */
 class db {
     /**
-     * @param {Array} plugins a list of plugins
-     *@returns {(boolean|Error)}
+     * @param {Array} data the database ( if not provided,it will grab from file, if it can)
+     * @returns {(boolean|Error)}
      */
-    constructor(plugins = []) {
+    constructor(data = []) {
         Object.defineProperty(this, "db", {
-            value: new Map(),
+            value: new Map(data),
             writable: true,
             configurable: true
         });
         try {
             this.load();
         } catch (e) {
-            throw new Error(
-                "File h.db.json is not accessable, does not exist, or is being written to by another program at this very moment. please fix permissions/ add the file with the contents of '{}' in it"
-            );
+            Object.defineProperty(this, "_conf_load_at_boot", {
+                value: e,
+                writable: true,
+                configurable: true
+            });
         }
-        plugins.forEach(pl => {
-            pl.run(this);
-        });
         return true;
     }
 
@@ -133,6 +132,17 @@ class db {
     async clear() {
         this.db.clear();
         await this.save();
+    }
+
+    /**
+     * @description load plugins
+     * @param {Array} pluginList Array of plugins
+     */
+    loadPlugins(pluginList) {
+        let self = this;
+        pluginList.forEach(pl => {
+            pl.run(self);
+        });
     }
 }
 module.exports = db;
