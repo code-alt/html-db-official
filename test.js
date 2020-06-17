@@ -16,6 +16,10 @@ let d = new htmlDB.db(c);
 console.log(d.all());
 console.log(d.hasTable("abx"));
 class tds extends htmlDB.Plugin{
+    constructor(){
+        let d = {name:"findMe"};
+        super(d)
+    }
     run(self){
         self.findMe = true;
         return;

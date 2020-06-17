@@ -139,10 +139,13 @@ class db {
      * @param {Array} pluginList Array of plugins
      */
     loadPlugins(pluginList) {
+        this.plugins = []
         let self = this;
         pluginList.forEach(pl => {
             pl.run(self);
+            this.plugins.push(pl.name);
         });
+        return true;
     }
 }
 module.exports = db;
