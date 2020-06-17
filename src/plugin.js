@@ -1,17 +1,21 @@
 /**
  *@file plugin
  *@description Plugin Class
- *@exports htmldb.plugin
+ *@exports htmldb.Plugin
  *@example
- * let DBPlugin = new HtmlDB.plugin();
- * ...
+ * class Dx extends HtmlDB.Plugin{
+ *  run(self){
+ *      self.node = true;
+ *      //...
+ *  }
+ * }
+ * //...
  */
 
 
 class Plugin{
-    constructor() {
-    }
-    run(){
-        throw new Error("Run Data Not Set.")
-    }
 }
+
+
+
+module.exports.Plugin = Plugin

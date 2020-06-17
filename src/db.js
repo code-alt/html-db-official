@@ -26,6 +26,9 @@ class db {
                 "File h.db.json is not accessable, does not exist, or is being written to by another program at this very moment. please fix permissions/ add the file with the contents of '{}' in it"
             );
         }
+        plugins.forEach(pl => {
+            pl.run(this);
+        });
         return true;
     }
 
