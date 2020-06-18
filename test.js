@@ -2,6 +2,7 @@
 let htmlDB = require("./index.js");
 let express = require("express");
 let app = express();
+(async() => {
 let axe = new htmlDB.db();
 axe.createTable("abx");
 
@@ -27,10 +28,11 @@ class tds extends htmlDB.Plugin{
 }
 axe.loadPlugins([new tds()]);
 console.log(axe.findMe)
-axe.save();
+await axe.save();
 axe.createTable("d1");
 console.log(axe.all())
-axe.load();
+await axe.load();
 console.log(axe.all())
+})();
 app.use("/db", htmlDB.WebManager);
 app.listen(3000)
